@@ -1,0 +1,123 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #fceabb, #f8b500);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 { font-size: 3em; margin-bottom: 30px; color: #d43f3a; }
+
+.cake-container { margin: 20px 0; position: relative; }
+
+.cake {
+    width: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.layer {
+    width: 200px;
+    height: 40px;
+    border-radius: 0 0 20px 20px;
+    margin-top: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.layer1 { background: #ff6b81; }
+.layer2 { background: #ff8c94; }
+.layer3 { background: #ffb6b9; }
+
+.candle {
+    width: 10px;
+    height: 40px;
+    background: #ffd700;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+    z-index: 2;
+}
+
+.flame {
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #ff0, #ff4500);
+    border-radius: 50%;
+    position: absolute;
+    top: -12px;
+    left: -1px;
+    animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.smoke {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: -1px;
+    opacity: 0;
+    animation: smokeUp 2s forwards;
+}
+
+@keyframes smokeUp {
+    0% { transform: translateY(0); opacity: 0.6; }
+    100% { transform: translateY(-50px) scale(1.5); opacity: 0; }
+}
+
+button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background: #ff6b81;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover { background: #ff3b5c; }
+
+#wishes { margin-top: 30px; font-size: 1.2em; }
+
+.gallery {
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover { transform: scale(1.1); }
+
+#confettiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
