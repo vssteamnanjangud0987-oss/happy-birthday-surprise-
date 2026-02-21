@@ -1,6 +1,47 @@
-<div class="gallery">
-    <h2>🎁 Memories & Pictures</h2>
-    <img src="images/photo1.jpg" alt="Birthday Photo 1">
-    <img src="images/photo2.jpg" alt="Birthday Photo 2">
-    <img src="images/photo3.jpg" alt="Birthday Photo 3">
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Surprise!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy Birthday! 🎉</h1>
+
+        <div class="cake-container">
+            <div class="cake">
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="smoke"></div>
+                </div>
+                <div class="layer layer1"></div>
+                <div class="layer layer2"></div>
+                <div class="layer layer3"></div>
+            </div>
+        </div>
+
+        <button id="blowButton">Blow Candles 🕯️</button>
+
+        <div id="wishes">
+            <h2>💌 Birthday Thoughts</h2>
+            <p>“May your day be filled with love, joy, and endless smiles!”</p>
+            <p>“Another year older, wiser, and more amazing!”</p>
+            <p>“Wishing you laughter, happiness, and all the cake you can eat!”</p>
+        </div>
+
+        <div class="gallery">
+            <h2>🎁 Memories & Pictures</h2>
+            <!-- Replace with your own images in images/ folder -->
+            <img src="images/photo1.jpg" alt="Birthday Photo 1">
+            <img src="images/photo2.jpg" alt="Birthday Photo 2">
+            <img src="images/photo3.jpg" alt="Birthday Photo 3">
+        </div>
+    </div>
+
+    <canvas id="confettiCanvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
